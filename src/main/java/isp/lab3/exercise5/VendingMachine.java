@@ -9,7 +9,7 @@ public class VendingMachine {
     private String[] products = {"Water", "Oreo", "Milk", "Cola", "Biscuit", "Bread", "Coffee"};
     private int[] price = {1, 1, 3, 2, 2, 1, 2};
 
-    void displayProducts() {
+    public void displayProducts() {
         System.out.println("Currently available products: ");
 
         for (int i = 0; i < 7; i++) {
@@ -17,11 +17,15 @@ public class VendingMachine {
         }
     }
 
-    void insertCoin(int value) {
+    public String[] getProducts() {
+        return products;
+    }
+
+    public void insertCoin(int value) {
         credit += value;
     }
 
-    String selectProduct(int id) {
+    public String selectProduct(int id) {
         String message;
 
         int index = IntStream.range(0, ids.length)
@@ -39,11 +43,11 @@ public class VendingMachine {
         return message;
     }
 
-    int displayCredit() {
+    public int displayCredit() {
         return credit;
     }
 
-    void userMenu() {
+    public void userMenu() {
         insertCoin(100);
         System.out.println("Welcome ! \nOperations available: ");
         System.out.println("1 - Display products 2 - Display credit 3 - Select a product 4 - Exit ");

@@ -1,9 +1,9 @@
 package isp.lab3.exercise1;
 
 public class Tree {
-    int height;
+    private int height;
 
-    Tree() {
+    public Tree() {
         height = 15;
     }
 
@@ -11,6 +11,10 @@ public class Tree {
         if (meters >= 1) {
             height += meters;
         }
+    }
+
+    public int getHeight() {
+        return height;
     }
 
     @Override

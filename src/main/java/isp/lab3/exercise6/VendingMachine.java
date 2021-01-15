@@ -9,23 +9,23 @@ public class VendingMachine {
         return vendingMachine;
     }
 
-    void displayProducts() {
+    public void displayProducts() {
         System.out.println("Display prod");
     }
 
-    void insertCoin() {
+    public void insertCoin() {
         System.out.println("Insert coin");
     }
 
-    void selectProd() {
+    public void selectProd() {
         System.out.println("Prod selected");
     }
 
-    void displayCredit() {
+    public void displayCredit() {
         System.out.println("Display credit");
     }
 
-    void userMenu() {
+    public void userMenu() {
         displayCredit();
         displayProducts();
     }
